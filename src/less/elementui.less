@@ -1,0 +1,207 @@
+
+// Element ui 样式
+
+// 菜单栏样式
+.el-menu{
+  border-right: none !important;
+    .el-submenu {
+      .el-submenu__title {
+        i {
+          font-size: 22px;
+          color: @text-gray;
+          font-weight: 600;
+          &:last-child{
+            font-size: 14px;
+          }
+        }
+        span {
+          font-weight: 600;
+          margin-left: 18px;
+          font-size: 16px;
+          color: @text-gray;
+        }
+      }
+      .el-menu-item{
+        color: @text-gray;
+        font-weight: 600;
+        height: 42px;
+        line-height: 42px;
+        font-size: 14px;
+        padding-left: 64px !important;
+      }
+    }
+    .submenu--active{
+      .el-submenu__title{
+        i{
+          color: @text-blue;
+          transition: all 0.3s ease;
+        }
+        span{
+          color: @text-dark;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+}
+
+
+// 表单样式
+.el-table {
+  .el-table-column--selection{
+    .cell{
+      padding: 0 !important;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  th,td{
+    div{
+      text-align: center !important;
+      .dialog{
+        color: @text-blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.el-table {
+  margin-top: 1rem;
+  .el-table__header-wrapper,
+  .el-table__fixed-header-wrapper {
+    tr {
+      th {
+        height: 48px;
+        background-color: #fafafa !important;
+        font-weight: bold;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.7);
+        line-height: 22px;
+      }
+    }
+  }
+  .el-table__body-wrapper,
+  .el-table__fixed-body-wrapper {
+    .el-table__row {
+      td {
+        height: 48px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.65);
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+
+// 表头错位问题
+body .el-table th.gutter{
+  display: table-cell!important;
+}
+
+
+.el-tabs__header{
+  margin-bottom: 0 !important;
+}
+.el-tabs__content{
+  .el-tabs__nav {
+    margin-left: 25px !important;
+  }
+}
+
+.el-dropdown{
+  span.cursor-pointer {
+    outline: 0;
+  }
+}
+
+// 去掉数字输入框小箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+// 加载蒙版颜色
+.el-loading-mask{
+  background-color: #ffffff !important;
+}
+
+// 暂无数据样式
+.el-table__empty-block{
+  // justify-content: start !important;
+  .el-table__empty-text{
+    display: none;
+    // margin-left: 760px;
+    width: 100px !important;
+  }
+}
+
+// 按钮样式
+.el-button{
+  height: 36px;
+  padding: 0 32px !important;
+  
+}
+
+// 主按钮样式
+.el-button--primary{
+  color: white !important;
+  background-color: @bg-blue !important;
+  // background-color: @menu-hover-bg !important;
+  border-color: transparent !important;
+  &:hover{
+    background-color: rgb(100, 163, 245) !important;
+    border-color: none !important;
+  }
+}
+
+//警告按钮样式
+.el-button--warning{
+  color: #fff !important;
+  background-color: rgb(199, 55, 50)!important;
+  border-color: transparent !important;
+  &:hover{
+    background-color: rgb(230, 10, 2) !important;
+    border-color: transparent !important;
+    color:#fff !important;
+  }
+}
+
+// 按钮--small
+.el-button--small{
+  padding: 0 20px !important;
+  height: 32px;
+}
+
+// 按钮--mini
+.el-button--mini{
+  padding: 0 !important;
+  width: 80px;
+  font-size: 14px !important;
+  height: 30px;
+}
+
+// 输入框样式
+.el-input{
+  input{
+    background-color: transparent;
+  }
+}
+
+.dialog-tab {
+  .el-dialog__body {
+    padding: 0 !important;
+  }
+}
+
+.nav-bars .el-tabs__content .el-tab-pane{
+  height: 100%;
+  &>div{
+    height: 100%;
+    padding: 24px;
+  }
+}
