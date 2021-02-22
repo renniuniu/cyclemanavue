@@ -29,16 +29,16 @@ export default {
   },
   mutations: {
     getDictionary(state){
-      // 获取字典
-      axios({
-        method: "post",
-        data:{
-        },
-        url: $config.baseURL+"/enum/getEnum",
-      }).then(res=>{
-        // 设置字典
-        state.dictionary = res.data.resData
-      })
+      // // 获取字典
+      // axios({
+      //   method: "post",
+      //   data:{
+      //   },
+      //   url: $config.baseURL+"/enum/getEnum",
+      // }).then(res=>{
+      //   // 设置字典
+      //   state.dictionary = res.data.resData
+      // })
     }
   }
 };

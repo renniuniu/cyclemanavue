@@ -51,7 +51,7 @@ export default {
     {
       name: '3-2',
       label: '产品库存',
-      path: '/store/partstore',
+      path: '/store/productstore',
     },
     ],
   },

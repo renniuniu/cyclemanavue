@@ -23,7 +23,9 @@ import ElementUI from "element-ui";
 Vue.use(ElementUI);
 // 按需引入，以后再说
 // import { Message } from "element-ui";
+import echarts from 'echarts'
 
+Vue.prototype.$echarts = echarts
 // 全局注册组件
 import tableBasic from "./components/common/table-basic";
 import tableEditor from "./components/common/table-editor";

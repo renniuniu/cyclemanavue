@@ -60,7 +60,7 @@
                 ? item.modes
                 : [
                     { function: 'edit', text: '修改' },
-                    { function: 'destroy', text: '删除' },
+                    { function: 'destroy', text: '删除' }
                   ])"
             >
               <el-button
@@ -226,11 +226,11 @@ export default {
     // 表格总宽度
     table_width() {
       return this.tableWidth ? this.tableWidth : "";
-    },
-    // 字典表
-    dictionary() {
-      return this.$store.state.Dictionary.dictionary;
     }
+    // 字典表
+    // dictionary() {
+    //   return this.$store.state.Dictionary.dictionary;
+    // }
   },
   watch: {
     currentPage() {
@@ -258,8 +258,8 @@ export default {
         case "edit":
           this.dialogInfo[show] = true;
           this.dialogInfo["type"] = "modify";
-					break;
-				case "set":
+          break;
+        case "set":
           this.dialogInfo[show] = true;
           this.dialogInfo["type"] = "modify";
           break;
@@ -390,11 +390,11 @@ export default {
   },
   mounted() {
     this.getTable();
-    this.header.forEach(item => {
-      if (this.dictionary[item.key]) {
-        item.key = "conv_" + item.key;
-      }
-    });
+    // this.header.forEach(item => {
+    //   if (this.dictionary[item.key]) {
+    //     item.key = "conv_" + item.key;
+    //   }
+    // });
   }
 };
 </script>

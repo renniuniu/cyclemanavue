@@ -8,6 +8,7 @@ export default {
 			dialogInfo: {
 				showEdit: false,
 				type: "",
+				showAdd:false,
 				showDiscard: false,
 				showChange: false
 			},
@@ -22,7 +23,7 @@ export default {
 	},
 	methods: {
 		openAdd() {
-			this.dialogInfo.showEdit = true;
+			this.dialogInfo.showAdd = true;
 			this.dialogInfo.type = 'add';
 		},
 		getTable() {

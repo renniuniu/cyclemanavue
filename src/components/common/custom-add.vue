@@ -2,7 +2,7 @@
   <!-- 新增功能 -->
   <el-dialog
     :title="title"
-    :visible.sync="dialogInfo.showEdit"
+    :visible.sync="dialogInfo.showAdd"
     :width="dialogWidth"
     top="12vh"
     :before-close="closeAdd"
@@ -36,29 +36,29 @@ export default {
     form: {
       type: Array,
       default: () => []
-		},
-		formValue: {
+    },
+    formValue: {
       type: Object,
       default: () => ({})
-		},
-		formValue_empty:{
+    },
+    formValue_empty: {
       type: Object,
       default: () => ({})
-		},
+    },
     api: {
       type: String,
       default: ""
-		},
-		title:{
-			type: String,
-			default: ""
-		}
-	},
+    },
+    title: {
+      type: String,
+      default: ""
+    }
+  },
   methods: {
     closeAdd() {
-      this.dialogInfo.showEdit = false;
-			// this.formValue = this.formValue_empty;
-			Object.assign(this.formValue,this.formValue_empty);
+      this.dialogInfo.showAdd = false;
+      // this.formValue = this.formValue_empty;
+      Object.assign(this.formValue, this.formValue_empty);
     },
     add() {
       let flag = this.$refs.childRules.validate();
@@ -76,17 +76,17 @@ export default {
         this.$message.error("表单信息不完整，请继续填写");
       }
     }
-	},
-	computed: {
-		autoSearchObject(){
-			return this.$store.state.Common.autoSearchObject;
-		}
-	},
-	watch: {
-		"autoSearchObject"(val){
-			this.formValue.referenceId = val.referenceId
-		}
-	},
+  },
+  computed: {
+    autoSearchObject() {
+      return this.$store.state.Common.autoSearchObject;
+    }
+  },
+  watch: {
+    autoSearchObject(val) {
+      this.formValue.referenceId = val.referenceId;
+    }
+  }
   // // 表单生成默认值
   // created() {
   //   let form_value = {};
@@ -95,7 +95,7 @@ export default {
   //       ? (form_value[item.name] = [])
   //       : (form_value[item.name] = "");
   //   });
-	// 	this.formValue = form_value;
-	// },
+  // 	this.formValue = form_value;
+  // },
 };
 </script>
